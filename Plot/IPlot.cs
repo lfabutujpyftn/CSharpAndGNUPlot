@@ -11,13 +11,13 @@ namespace Plot
         Points,
         Lines
     }
-    public enum Color
+    /*public enum Color
     {
         Red,
         Green,
         Blue,
         Black
-    }
+    }*/
 
     public struct Point
     {
@@ -32,7 +32,10 @@ namespace Plot
 
     public interface IPlot
     {
-        Color Color { get; set; }
+       // Color Color { get; set; }
+
+        string Color { get; set; }
+
         DrawType DrawType { get; set; }
         string XTitle { get; set; }
         string YTitle { get; set; }

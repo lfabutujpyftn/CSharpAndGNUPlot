@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             this.TestGroup = new System.Windows.Forms.GroupBox();
+            this.Generatebutton = new System.Windows.Forms.Button();
+            this.tolabel = new System.Windows.Forms.Label();
+            this.fromlabel = new System.Windows.Forms.Label();
+            this.steplabel = new System.Windows.Forms.Label();
+            this.finishlabel = new System.Windows.Forms.Label();
+            this.finishnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.stepnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.fromnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.tonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.startlabel = new System.Windows.Forms.Label();
             this.startnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.PlotGroup = new System.Windows.Forms.GroupBox();
-            this.tonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.fromnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.stepnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.finishnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.finishlabel = new System.Windows.Forms.Label();
-            this.steplabel = new System.Windows.Forms.Label();
-            this.fromlabel = new System.Windows.Forms.Label();
-            this.tolabel = new System.Windows.Forms.Label();
-            this.saveFile = new System.Windows.Forms.SaveFileDialog();
-            this.Generatebutton = new System.Windows.Forms.Button();
-            this.colorlabel = new System.Windows.Forms.Label();
-            this.drawtypelabel = new System.Windows.Forms.Label();
-            this.colorcomboBox = new System.Windows.Forms.ComboBox();
-            this.drawtypecomboBox = new System.Windows.Forms.ComboBox();
-            this.xlabel = new System.Windows.Forms.Label();
-            this.ylabel = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
-            this.xlabeltextBox = new System.Windows.Forms.TextBox();
-            this.ylabeltextBox = new System.Windows.Forms.TextBox();
-            this.labeltextBox = new System.Windows.Forms.TextBox();
             this.plotbutton = new System.Windows.Forms.Button();
+            this.labeltextBox = new System.Windows.Forms.TextBox();
+            this.ylabeltextBox = new System.Windows.Forms.TextBox();
+            this.xlabeltextBox = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.ylabel = new System.Windows.Forms.Label();
+            this.xlabel = new System.Windows.Forms.Label();
+            this.drawtypecomboBox = new System.Windows.Forms.ComboBox();
+            this.drawtypelabel = new System.Windows.Forms.Label();
+            this.colorlabel = new System.Windows.Forms.Label();
+            this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.colorbutton = new System.Windows.Forms.Button();
             this.TestGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stepnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fromnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startnumericUpDown)).BeginInit();
             this.PlotGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tonumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fromnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stepnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // TestGroup
@@ -86,6 +87,131 @@
             this.TestGroup.TabStop = false;
             this.TestGroup.Text = "Generate test file";
             // 
+            // Generatebutton
+            // 
+            this.Generatebutton.Location = new System.Drawing.Point(460, 27);
+            this.Generatebutton.Name = "Generatebutton";
+            this.Generatebutton.Size = new System.Drawing.Size(75, 21);
+            this.Generatebutton.TabIndex = 12;
+            this.Generatebutton.Text = "Generate";
+            this.Generatebutton.UseVisualStyleBackColor = true;
+            this.Generatebutton.Click += new System.EventHandler(this.Generatebutton_Click);
+            // 
+            // tolabel
+            // 
+            this.tolabel.AutoSize = true;
+            this.tolabel.Location = new System.Drawing.Point(378, 29);
+            this.tolabel.Name = "tolabel";
+            this.tolabel.Size = new System.Drawing.Size(16, 13);
+            this.tolabel.TabIndex = 9;
+            this.tolabel.Text = "to";
+            // 
+            // fromlabel
+            // 
+            this.fromlabel.AutoSize = true;
+            this.fromlabel.Location = new System.Drawing.Point(284, 29);
+            this.fromlabel.Name = "fromlabel";
+            this.fromlabel.Size = new System.Drawing.Size(27, 13);
+            this.fromlabel.TabIndex = 8;
+            this.fromlabel.Text = "from";
+            // 
+            // steplabel
+            // 
+            this.steplabel.AutoSize = true;
+            this.steplabel.Location = new System.Drawing.Point(197, 29);
+            this.steplabel.Name = "steplabel";
+            this.steplabel.Size = new System.Drawing.Size(27, 13);
+            this.steplabel.TabIndex = 7;
+            this.steplabel.Text = "step";
+            // 
+            // finishlabel
+            // 
+            this.finishlabel.AutoSize = true;
+            this.finishlabel.Location = new System.Drawing.Point(99, 29);
+            this.finishlabel.Name = "finishlabel";
+            this.finishlabel.Size = new System.Drawing.Size(31, 13);
+            this.finishlabel.TabIndex = 6;
+            this.finishlabel.Text = "finish";
+            // 
+            // finishnumericUpDown
+            // 
+            this.finishnumericUpDown.Location = new System.Drawing.Point(136, 27);
+            this.finishnumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.finishnumericUpDown.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.finishnumericUpDown.Name = "finishnumericUpDown";
+            this.finishnumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.finishnumericUpDown.TabIndex = 8;
+            this.finishnumericUpDown.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // stepnumericUpDown
+            // 
+            this.stepnumericUpDown.DecimalPlaces = 1;
+            this.stepnumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.stepnumericUpDown.Location = new System.Drawing.Point(230, 27);
+            this.stepnumericUpDown.Name = "stepnumericUpDown";
+            this.stepnumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.stepnumericUpDown.TabIndex = 9;
+            this.stepnumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // fromnumericUpDown
+            // 
+            this.fromnumericUpDown.Location = new System.Drawing.Point(317, 27);
+            this.fromnumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.fromnumericUpDown.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.fromnumericUpDown.Name = "fromnumericUpDown";
+            this.fromnumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.fromnumericUpDown.TabIndex = 10;
+            // 
+            // tonumericUpDown
+            // 
+            this.tonumericUpDown.Location = new System.Drawing.Point(400, 27);
+            this.tonumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tonumericUpDown.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.tonumericUpDown.Name = "tonumericUpDown";
+            this.tonumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.tonumericUpDown.TabIndex = 11;
+            this.tonumericUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
             // startlabel
             // 
             this.startlabel.AutoSize = true;
@@ -110,7 +236,7 @@
             -2147483648});
             this.startnumericUpDown.Name = "startnumericUpDown";
             this.startnumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.startnumericUpDown.TabIndex = 0;
+            this.startnumericUpDown.TabIndex = 7;
             this.startnumericUpDown.Value = new decimal(new int[] {
             50,
             0,
@@ -122,6 +248,7 @@
             this.PlotGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PlotGroup.AutoSize = true;
+            this.PlotGroup.Controls.Add(this.colorbutton);
             this.PlotGroup.Controls.Add(this.plotbutton);
             this.PlotGroup.Controls.Add(this.labeltextBox);
             this.PlotGroup.Controls.Add(this.ylabeltextBox);
@@ -130,7 +257,6 @@
             this.PlotGroup.Controls.Add(this.ylabel);
             this.PlotGroup.Controls.Add(this.xlabel);
             this.PlotGroup.Controls.Add(this.drawtypecomboBox);
-            this.PlotGroup.Controls.Add(this.colorcomboBox);
             this.PlotGroup.Controls.Add(this.drawtypelabel);
             this.PlotGroup.Controls.Add(this.colorlabel);
             this.PlotGroup.Location = new System.Drawing.Point(12, 12);
@@ -140,190 +266,42 @@
             this.PlotGroup.TabStop = false;
             this.PlotGroup.Text = "Ploting";
             // 
-            // tonumericUpDown
+            // plotbutton
             // 
-            this.tonumericUpDown.Location = new System.Drawing.Point(400, 27);
-            this.tonumericUpDown.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.tonumericUpDown.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.tonumericUpDown.Name = "tonumericUpDown";
-            this.tonumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.tonumericUpDown.TabIndex = 2;
-            this.tonumericUpDown.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
+            this.plotbutton.Location = new System.Drawing.Point(400, 23);
+            this.plotbutton.Name = "plotbutton";
+            this.plotbutton.Size = new System.Drawing.Size(135, 106);
+            this.plotbutton.TabIndex = 6;
+            this.plotbutton.Text = "Plot!!!";
+            this.plotbutton.UseVisualStyleBackColor = true;
+            this.plotbutton.Click += new System.EventHandler(this.plotbutton_Click);
             // 
-            // fromnumericUpDown
+            // labeltextBox
             // 
-            this.fromnumericUpDown.Location = new System.Drawing.Point(317, 27);
-            this.fromnumericUpDown.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.fromnumericUpDown.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.fromnumericUpDown.Name = "fromnumericUpDown";
-            this.fromnumericUpDown.Size = new System.Drawing.Size(55, 20);
-            this.fromnumericUpDown.TabIndex = 3;
+            this.labeltextBox.Location = new System.Drawing.Point(70, 109);
+            this.labeltextBox.Name = "labeltextBox";
+            this.labeltextBox.Size = new System.Drawing.Size(309, 20);
+            this.labeltextBox.TabIndex = 5;
+            this.labeltextBox.Text = "graf";
+            this.labeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // stepnumericUpDown
+            // ylabeltextBox
             // 
-            this.stepnumericUpDown.DecimalPlaces = 1;
-            this.stepnumericUpDown.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.stepnumericUpDown.Location = new System.Drawing.Point(230, 27);
-            this.stepnumericUpDown.Name = "stepnumericUpDown";
-            this.stepnumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.stepnumericUpDown.TabIndex = 4;
-            this.stepnumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.ylabeltextBox.Location = new System.Drawing.Point(70, 82);
+            this.ylabeltextBox.Name = "ylabeltextBox";
+            this.ylabeltextBox.Size = new System.Drawing.Size(309, 20);
+            this.ylabeltextBox.TabIndex = 4;
+            this.ylabeltextBox.Text = "Y";
+            this.ylabeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // finishnumericUpDown
+            // xlabeltextBox
             // 
-            this.finishnumericUpDown.Location = new System.Drawing.Point(136, 27);
-            this.finishnumericUpDown.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.finishnumericUpDown.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.finishnumericUpDown.Name = "finishnumericUpDown";
-            this.finishnumericUpDown.Size = new System.Drawing.Size(55, 20);
-            this.finishnumericUpDown.TabIndex = 5;
-            this.finishnumericUpDown.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // finishlabel
-            // 
-            this.finishlabel.AutoSize = true;
-            this.finishlabel.Location = new System.Drawing.Point(99, 29);
-            this.finishlabel.Name = "finishlabel";
-            this.finishlabel.Size = new System.Drawing.Size(31, 13);
-            this.finishlabel.TabIndex = 6;
-            this.finishlabel.Text = "finish";
-            // 
-            // steplabel
-            // 
-            this.steplabel.AutoSize = true;
-            this.steplabel.Location = new System.Drawing.Point(197, 29);
-            this.steplabel.Name = "steplabel";
-            this.steplabel.Size = new System.Drawing.Size(27, 13);
-            this.steplabel.TabIndex = 7;
-            this.steplabel.Text = "step";
-            // 
-            // fromlabel
-            // 
-            this.fromlabel.AutoSize = true;
-            this.fromlabel.Location = new System.Drawing.Point(284, 29);
-            this.fromlabel.Name = "fromlabel";
-            this.fromlabel.Size = new System.Drawing.Size(27, 13);
-            this.fromlabel.TabIndex = 8;
-            this.fromlabel.Text = "from";
-            // 
-            // tolabel
-            // 
-            this.tolabel.AutoSize = true;
-            this.tolabel.Location = new System.Drawing.Point(378, 29);
-            this.tolabel.Name = "tolabel";
-            this.tolabel.Size = new System.Drawing.Size(16, 13);
-            this.tolabel.TabIndex = 9;
-            this.tolabel.Text = "to";
-            // 
-            // Generatebutton
-            // 
-            this.Generatebutton.Location = new System.Drawing.Point(460, 27);
-            this.Generatebutton.Name = "Generatebutton";
-            this.Generatebutton.Size = new System.Drawing.Size(75, 21);
-            this.Generatebutton.TabIndex = 10;
-            this.Generatebutton.Text = "Generate";
-            this.Generatebutton.UseVisualStyleBackColor = true;
-            this.Generatebutton.Click += new System.EventHandler(this.Generatebutton_Click);
-            // 
-            // colorlabel
-            // 
-            this.colorlabel.AutoSize = true;
-            this.colorlabel.Location = new System.Drawing.Point(6, 26);
-            this.colorlabel.Name = "colorlabel";
-            this.colorlabel.Size = new System.Drawing.Size(31, 13);
-            this.colorlabel.TabIndex = 0;
-            this.colorlabel.Text = "Color";
-            // 
-            // drawtypelabel
-            // 
-            this.drawtypelabel.AutoSize = true;
-            this.drawtypelabel.Location = new System.Drawing.Point(197, 26);
-            this.drawtypelabel.Name = "drawtypelabel";
-            this.drawtypelabel.Size = new System.Drawing.Size(55, 13);
-            this.drawtypelabel.TabIndex = 1;
-            this.drawtypelabel.Text = "Draw type";
-            // 
-            // colorcomboBox
-            // 
-            this.colorcomboBox.FormattingEnabled = true;
-            this.colorcomboBox.Items.AddRange(new object[] {
-            "Red",
-            "Green",
-            "Blue",
-            "Black"});
-            this.colorcomboBox.Location = new System.Drawing.Point(70, 23);
-            this.colorcomboBox.Name = "colorcomboBox";
-            this.colorcomboBox.Size = new System.Drawing.Size(121, 21);
-            this.colorcomboBox.TabIndex = 2;
-            // 
-            // drawtypecomboBox
-            // 
-            this.drawtypecomboBox.FormattingEnabled = true;
-            this.drawtypecomboBox.Items.AddRange(new object[] {
-            "Lines",
-            "Points"});
-            this.drawtypecomboBox.Location = new System.Drawing.Point(258, 23);
-            this.drawtypecomboBox.Name = "drawtypecomboBox";
-            this.drawtypecomboBox.Size = new System.Drawing.Size(121, 21);
-            this.drawtypecomboBox.TabIndex = 3;
-            // 
-            // xlabel
-            // 
-            this.xlabel.AutoSize = true;
-            this.xlabel.Location = new System.Drawing.Point(6, 57);
-            this.xlabel.Name = "xlabel";
-            this.xlabel.Size = new System.Drawing.Size(40, 13);
-            this.xlabel.TabIndex = 4;
-            this.xlabel.Text = "XLabel";
-            // 
-            // ylabel
-            // 
-            this.ylabel.AutoSize = true;
-            this.ylabel.Location = new System.Drawing.Point(6, 85);
-            this.ylabel.Name = "ylabel";
-            this.ylabel.Size = new System.Drawing.Size(40, 13);
-            this.ylabel.TabIndex = 5;
-            this.ylabel.Text = "YLabel";
+            this.xlabeltextBox.Location = new System.Drawing.Point(70, 54);
+            this.xlabeltextBox.Name = "xlabeltextBox";
+            this.xlabeltextBox.Size = new System.Drawing.Size(309, 20);
+            this.xlabeltextBox.TabIndex = 3;
+            this.xlabeltextBox.Text = "X";
+            this.xlabeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label
             // 
@@ -334,46 +312,66 @@
             this.label.TabIndex = 6;
             this.label.Text = "Label";
             // 
-            // xlabeltextBox
+            // ylabel
             // 
-            this.xlabeltextBox.Location = new System.Drawing.Point(70, 54);
-            this.xlabeltextBox.Name = "xlabeltextBox";
-            this.xlabeltextBox.Size = new System.Drawing.Size(309, 20);
-            this.xlabeltextBox.TabIndex = 7;
-            this.xlabeltextBox.Text = "X";
-            this.xlabeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ylabel.AutoSize = true;
+            this.ylabel.Location = new System.Drawing.Point(6, 85);
+            this.ylabel.Name = "ylabel";
+            this.ylabel.Size = new System.Drawing.Size(40, 13);
+            this.ylabel.TabIndex = 5;
+            this.ylabel.Text = "YLabel";
             // 
-            // ylabeltextBox
+            // xlabel
             // 
-            this.ylabeltextBox.Location = new System.Drawing.Point(70, 82);
-            this.ylabeltextBox.Name = "ylabeltextBox";
-            this.ylabeltextBox.Size = new System.Drawing.Size(309, 20);
-            this.ylabeltextBox.TabIndex = 8;
-            this.ylabeltextBox.Text = "Y";
-            this.ylabeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xlabel.AutoSize = true;
+            this.xlabel.Location = new System.Drawing.Point(6, 57);
+            this.xlabel.Name = "xlabel";
+            this.xlabel.Size = new System.Drawing.Size(40, 13);
+            this.xlabel.TabIndex = 4;
+            this.xlabel.Text = "XLabel";
             // 
-            // labeltextBox
+            // drawtypecomboBox
             // 
-            this.labeltextBox.Location = new System.Drawing.Point(70, 109);
-            this.labeltextBox.Name = "labeltextBox";
-            this.labeltextBox.Size = new System.Drawing.Size(309, 20);
-            this.labeltextBox.TabIndex = 9;
-            this.labeltextBox.Text = "graf";
-            this.labeltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.drawtypecomboBox.FormattingEnabled = true;
+            this.drawtypecomboBox.Items.AddRange(new object[] {
+            "Lines",
+            "Points"});
+            this.drawtypecomboBox.Location = new System.Drawing.Point(258, 23);
+            this.drawtypecomboBox.Name = "drawtypecomboBox";
+            this.drawtypecomboBox.Size = new System.Drawing.Size(121, 21);
+            this.drawtypecomboBox.TabIndex = 2;
             // 
-            // plotbutton
+            // drawtypelabel
             // 
-            this.plotbutton.Location = new System.Drawing.Point(400, 23);
-            this.plotbutton.Name = "plotbutton";
-            this.plotbutton.Size = new System.Drawing.Size(135, 106);
-            this.plotbutton.TabIndex = 10;
-            this.plotbutton.Text = "Plot!!!";
-            this.plotbutton.UseVisualStyleBackColor = true;
-            this.plotbutton.Click += new System.EventHandler(this.plotbutton_Click);
+            this.drawtypelabel.AutoSize = true;
+            this.drawtypelabel.Location = new System.Drawing.Point(197, 26);
+            this.drawtypelabel.Name = "drawtypelabel";
+            this.drawtypelabel.Size = new System.Drawing.Size(55, 13);
+            this.drawtypelabel.TabIndex = 1;
+            this.drawtypelabel.Text = "Draw type";
+            // 
+            // colorlabel
+            // 
+            this.colorlabel.AutoSize = true;
+            this.colorlabel.Location = new System.Drawing.Point(6, 26);
+            this.colorlabel.Name = "colorlabel";
+            this.colorlabel.Size = new System.Drawing.Size(31, 13);
+            this.colorlabel.TabIndex = 0;
+            this.colorlabel.Text = "Color";
             // 
             // openFile
             // 
             this.openFile.FileName = "openFile";
+            // 
+            // colorbutton
+            // 
+            this.colorbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.colorbutton.Location = new System.Drawing.Point(70, 21);
+            this.colorbutton.Name = "colorbutton";
+            this.colorbutton.Size = new System.Drawing.Size(121, 23);
+            this.colorbutton.TabIndex = 1;
+            this.colorbutton.UseVisualStyleBackColor = false;
+            this.colorbutton.Click += new System.EventHandler(this.colorbutton_Click);
             // 
             // MainForm
             // 
@@ -387,13 +385,13 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.TestGroup.ResumeLayout(false);
             this.TestGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stepnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fromnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startnumericUpDown)).EndInit();
             this.PlotGroup.ResumeLayout(false);
             this.PlotGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tonumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fromnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stepnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +413,6 @@
         private System.Windows.Forms.NumericUpDown tonumericUpDown;
         private System.Windows.Forms.Button Generatebutton;
         private System.Windows.Forms.SaveFileDialog saveFile;
-        private System.Windows.Forms.ComboBox colorcomboBox;
         private System.Windows.Forms.Label drawtypelabel;
         private System.Windows.Forms.Label colorlabel;
         private System.Windows.Forms.ComboBox drawtypecomboBox;
@@ -427,6 +424,8 @@
         private System.Windows.Forms.Label xlabel;
         private System.Windows.Forms.Button plotbutton;
         private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button colorbutton;
     }
 }
 

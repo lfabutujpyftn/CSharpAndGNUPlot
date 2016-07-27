@@ -17,7 +17,7 @@ namespace TestGenerator
             gen.Step = .1;
             gen.From = -30;
             gen.To = 30;
-            gen.genTest();
+            gen.GenTest();
         }
     }
 }

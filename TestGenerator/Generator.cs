@@ -9,53 +9,53 @@ namespace TestGenerator
 {
     public class Generator
     {
-        private string filename;
-        private int start;
-        private int finish;
-        private double step;
-        private int from;
-        private int to;
+        private string _filename;
+        private int _start;
+        private int _finish;
+        private double _step;
+        private int _from;
+        private int _to;
 
         public string Filename
         {
-            get { return filename; }
-            set { filename = value; }
+            get { return _filename; }
+            set { _filename = value; }
         }
         public int Start
         {
-            get { return start; }
-            set { start = value; }
+            get { return _start; }
+            set { _start = value; }
         }
         public int Finish
         {
-            get { return finish; }
-            set { finish = value; }
+            get { return _finish; }
+            set { _finish = value; }
         }
         public double Step
         {
-            get { return step; }
-            set { step = value; }
+            get { return _step; }
+            set { _step = value; }
         }
         public int From
         {
-            get { return from; }
-            set { from = value; }
+            get { return _from; }
+            set { _from = value; }
         }
         public int To
         {
-            get { return to; }
-            set { to = value; }
+            get { return _to; }
+            set { _to = value; }
         }
 
-        public void genTest()
+        public void GenTest()
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-            FileStream file = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            FileStream file = new FileStream(_filename, FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(file);
             Random rnd = new Random();
-            for(double i = (double)start; i <= finish; i += step)
+            for(double i = (double)_start; i <= _finish; i += _step)
             {
-                string arg = i.ToString("G") + "\t" + rnd.Next(from, to).ToString("G");
+                string arg = i.ToString("G") + "\t" + rnd.Next(_from, _to).ToString("G");
                 writer.WriteLine(arg);
             }
             writer.Close();
